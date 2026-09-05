@@ -19,3 +19,5 @@ function getFlags() {
 
   return flags;
 }
+console.log (globalFlag)
+            
