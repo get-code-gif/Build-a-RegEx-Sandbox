@@ -19,6 +19,7 @@ function getFlags() {
 
   return flags;
 }
+<<<<<<< HEAD
 
 testButton.addEventListener("click", () => {
   const text = stringToTest.textContent.trim();
@@ -39,3 +40,7 @@ testButton.addEventListener("click", () => {
 
   stringToTest.innerHTML = result;
 });
+=======
+console.log (globalFlag)
+            
+>>>>>>> de05499144165fb59273205933bd116fa21f86ed
