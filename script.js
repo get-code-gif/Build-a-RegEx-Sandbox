@@ -21,18 +21,21 @@ function getFlags() {
 }
 
 testButton.addEventListener("click", () => {
-  const text = stringToTest.innerHTML.trim();
+  const text = stringToTest.textContent.trim();
   const pattern = new RegExp(regexPattern.value, getFlags());
 
-  const result = pattern.match(text);
+  const matches = text.match(pattern);
 
-  console.log(text);
-  console.log(pattern);
-  console.log(result);
-
-  if (result) {
-    testResult.innerHTML = `<span class="highlight">${text}</span>`;
-  } else {
-    testResult.innerHTML = `<span class="highlight"></span>`;
+  if (!matches) {
+    testResult.textContent = "no match";
+    return;
   }
+
+  testResult.textContent = matches.join(", ");
+
+  const result = text.replace(pattern, (match) => {
+    return `<span class="highlight">${match}</span>`;
+  });
+
+  stringToTest.innerHTML = result;
 });
