@@ -39,5 +39,5 @@ testButton.addEventListener("click", () => {
 
   stringToTest.innerHTML = result;
 });
-
+console.log(stringToTest);
 console.log(globalFlag);
