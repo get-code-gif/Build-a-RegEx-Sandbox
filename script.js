@@ -36,7 +36,7 @@ testButton.addEventListener("click", () => {
   const result = text.replace(pattern, (match) => {
     return `<span class="highlight">${match}</span>`;
   });
-
+console.log(result);
   stringToTest.innerHTML = result;
 });
 console.log(stringToTest);
